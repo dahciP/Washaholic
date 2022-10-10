@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 mongoose
-	.connect(process.env.CONNECTION_URL, {
+	.connect("mongodb+srv://admin-roshan:Test123@cluster0.s4p00fz.mongodb.net/?retryWrites=true&w=majority", {
 		useUnifiedTopology: true,
 		useNewUrlParser: true,
 		useCreateIndex: true,
