@@ -4,8 +4,8 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				"light-blue": "#11B4F5",
-				"lighter-blue": "#E8F8FE",
+				"light-blue": "#7A1EFF",
+				"lighter-blue": "#F3EBFF",
 				"light-gary": "#CCCCCC",
 			},
 			minHeight: {

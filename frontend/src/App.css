@@ -5,7 +5,7 @@
 	content: "";
 	width: 7rem;
 	height: 1.5rem;
-	background: #11b4f5;
+	background: #7a1eff;
 	position: absolute;
 	bottom: 15%;
 	right: -5%;
@@ -21,7 +21,7 @@ body {
 	height: 80px;
 	border-radius: 50%;
 	border: 8px solid rgba(195, 195, 195, 0.3);
-	border-top-color: #11b4f5;
+	border-top-color: #7a1eff;
 	animation: spin 1s linear infinite;
 }
 
