@@ -26,7 +26,7 @@ const Footer = () => {
 						<SiInstagram />
 						<SiTwitter />
 					</div>
-					<p className="pb-5">WASHAHOLIC 2021 - All rights reserved &copy;</p>
+					<p className="pb-5">WASHAHOLIC 2022 - All rights reserved &copy;</p>
 				</div>
 				<div>
 					<div className="flex justify-end items-start pt-5">
