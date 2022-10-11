@@ -9,7 +9,7 @@ import LogoWhite from "../../assets/images/logo-white.png";
 
 const Footer = () => {
 	return (
-		<footer className="bg-light-blue text-white pt-10">
+		<footer className="bg-black text-white pt-10">
 			<div className="flex mx-auto max-w-screen-2xl justify-between items-center px-10 min-h-12">
 				<div>
 					<img src={LogoWhite} alt="footer-logo" />
@@ -26,7 +26,7 @@ const Footer = () => {
 						<SiInstagram />
 						<SiTwitter />
 					</div>
-					<p className="pb-5">CLEANEX 2021 - All rights reserved &copy;</p>
+					<p className="pb-5">WASHAHOLIC 2021 - All rights reserved &copy;</p>
 				</div>
 				<div>
 					<div className="flex justify-end items-start pt-5">
@@ -41,7 +41,7 @@ const Footer = () => {
 						<div className="text-2xl pr-5">
 							<IoMail />
 						</div>
-						<p>info@cleanex.com</p>
+						<p>info@washaholic.com</p>
 					</div>
 					<div className="flex justify-end items-center pt-5">
 						<div className="text-2xl pr-5">
