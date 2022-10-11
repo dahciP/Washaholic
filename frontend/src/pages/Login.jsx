@@ -8,7 +8,7 @@ import RightBottomBubble from "../assets/images/right-bottom-bubble-reason.png";
 import { AuthContext } from "../contexts/AuthContext";
 
 const Login = () => {
-	document.title = "CLEANEX - Sign In";
+	document.title = "WASHAHOLIC - Sign In";
 	const history = useHistory();
 	const { getLoggedIn } = useContext(AuthContext);
 	const [error, setError] = useState("");

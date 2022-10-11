@@ -12,7 +12,7 @@ import { adminCardInfo } from "../helpers/adminCardsInfo";
 import Logo from "../assets/images/logo-blue.png";
 
 const Dashboard = () => {
-	document.title = "CLEANEX - Dashboard";
+	document.title = "WASHAHOLIC - Dashboard";
 	const [isLoading, setIsLoading] = useState(true);
 	const [totals, setTotals] = useState([]);
 	const graphOneNames = ["Pending", "Processing", "Completed"];

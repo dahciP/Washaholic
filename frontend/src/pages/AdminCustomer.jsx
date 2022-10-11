@@ -11,7 +11,7 @@ import ConfirmModal from "../components/modals/ConfirmModal";
 import CustomerViewModal from "../components/modals/CustomerViewModal";
 
 const AdminCustomer = () => {
-	document.title = "CLEANEX - Customers";
+	document.title = "WASHAHOLIC - Customers";
 	const [customers, setCustomers] = useState([]);
 	const [customerId, setCustomerId] = useState("");
 	const [showModal, setShowModal] = useState(false);

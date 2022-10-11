@@ -8,7 +8,7 @@ import RightBottomBubble from "../assets/images/right-bottom-bubble-reason.png";
 import { AuthContext } from "../contexts/AuthContext";
 
 const Register = () => {
-	document.title = "CLEANEX - Sign Up";
+	document.title = "WASHAHOLIC - Sign Up";
 	const [customer, setCustomer] = useState({
 		name: "",
 		email: "",

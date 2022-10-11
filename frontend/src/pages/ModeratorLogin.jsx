@@ -8,7 +8,7 @@ import LeftBubble from "../assets/images/left-bubble-process.png";
 import { AuthContext } from "../contexts/AuthContext";
 
 const AdminLogin = () => {
-	document.title = "CLEANEX - Moderator Login";
+	document.title = "WASHAHOLIC - Moderator Login";
 	const history = useHistory();
 	const { getLoggedIn } = useContext(AuthContext);
 	const [error, setError] = useState("");

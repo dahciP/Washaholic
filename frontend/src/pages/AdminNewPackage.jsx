@@ -11,7 +11,7 @@ import Success from "../components/toasts/Success";
 import { allowedTypes } from "../helpers/allowedUploads";
 
 const AdminNewPackage = () => {
-	document.title = "CLEANEX - New Package";
+	document.title = "WASHAHOLIC - New Package";
 	const history = useHistory();
 	const [file, setFile] = useState(null);
 	const [error, setError] = useState("");

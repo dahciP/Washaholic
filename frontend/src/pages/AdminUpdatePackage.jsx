@@ -14,7 +14,7 @@ import { allowedTypes } from "../helpers/allowedUploads";
 import { imageURL } from "../config/paths";
 
 const AdminUpdatePackage = () => {
-	document.title = "CLEANEX - Update Package";
+	document.title = "WASHAHOLIC - Update Package";
 	const history = useHistory();
 	const [file, setFile] = useState(null);
 	const [error, setError] = useState("");

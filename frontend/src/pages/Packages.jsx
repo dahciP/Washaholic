@@ -8,7 +8,7 @@ import PackageCard from "../components/packages/PackageCard";
 import Spinner from "../components/loading/Spinner";
 
 const Packages = () => {
-	document.title = "CLEANEX - All Packages";
+	document.title = "WASHAHOLIC - All Packages";
 	const [activePackages, setActivePackages] = useState([]);
 	const [searchQuery, setSearchQuery] = useState("");
 	const [isSearchEmpty, setIsSearchEmpty] = useState(false);

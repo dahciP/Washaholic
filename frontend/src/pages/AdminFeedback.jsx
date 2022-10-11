@@ -11,7 +11,7 @@ import ConfirmModal from "../components/modals/ConfirmModal";
 import FeedbackViewModal from "../components/modals/FeedbackViewModal";
 
 const AdminFeedback = () => {
-	document.title = "CLEANEX - Feedbacks";
+	document.title = "WASHAHOLIC - Feedbacks";
 	const [feedbacks, setFeedbacks] = useState([]);
 	const [isLoading, setIsLoading] = useState(true);
 	const [showModal, setShowModal] = useState(false);

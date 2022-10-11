@@ -13,7 +13,7 @@ import Spinner from "../components/loading/Spinner";
 import { imageURL } from "../config/paths";
 
 const AdminPackages = () => {
-	document.title = "CLEANEX - Pricing & Packages";
+	document.title = "WASHAHOLIC- Pricing & Packages";
 	const [packages, setPackages] = useState([]);
 	const [packageId, setPackageId] = useState("");
 	const [showModal, setShowModal] = useState(false);

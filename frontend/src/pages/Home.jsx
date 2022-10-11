@@ -7,7 +7,7 @@ import Feedback from "../components/home/Feedback";
 import Footer from "../components/footer/Footer";
 
 const Home = () => {
-	document.title = "CLEANEX";
+	document.title = "WASHAHOLIC";
 
 	return (
 		<div className="text-gray-800">
