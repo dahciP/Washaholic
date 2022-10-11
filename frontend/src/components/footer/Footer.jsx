@@ -34,7 +34,7 @@ const Footer = () => {
 							<TiLocation />
 						</div>
 						<p>
-							99 Street, Ward Place, <br /> Colombo.
+							Old D N Nagar, Andheri West, Mumbai, <br /> Colombo.
 						</p>
 					</div>
 					<div className="flex justify-end items-center pt-5">
