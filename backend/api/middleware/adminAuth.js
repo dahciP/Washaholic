@@ -1,5 +1,6 @@
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
+const Moderator = require('../models/moderator.model')
 
 /**
  * use to authorize as admin
@@ -25,6 +26,7 @@ const verifyAdminAuth = (req, res, next) => {
 			return res.status(401).json({ message: "Unauthorized" });
 		}
 	}
+
 };
 
 module.exports = { verifyAdminAuth };
