@@ -8,88 +8,73 @@ const jwt = require("jsonwebtoken");
  * @returns {Object} res
  */
 const loginModerator = async (req, res) => {
-  // * request body validation
-  if (req.body) {
-    const { username, password } = req.body;
+	// * request body validation
+	if (req.body) {
+		const { username, password } = req.body;
 
-    // * user inputs validation
-    if (!username || !password) {
-      return res.status(400).json({ message: "Please fill all the fields" });
-    }
+		// * user inputs validation
+		if (!username || !password) {
+			return res.status(400).json({ message: "Please fill all the fields" });
+		}
 
-    let userRole;
-    if (username.includes("@admin")) {
-      userRole = "admin";
-    } else if (username.includes("@manager")) {
-      userRole = "manager";
-    } else if (username.includes("@deliverer")) {
-      userRole = "deliverer";
-    } else if (username.includes("@worker")) {
-      userRole = "worker";
-    }
+		let userRole;
+		if (username.includes("@admin")) {
+			userRole = "admin";
+		} else if (username.includes("@manager")) {
+			userRole = "manager";
+		} else if (username.includes("@deliverer")) {
+			userRole = "deliverer";
+		} else if (username.includes("@worker")) {
+			userRole = "worker";
+		}
 
-    // * user inputs validation
-    if (!username || !password) {
-      return res.status(400).json({ message: "Please fill all the fields" });
-    }
+		// * user inputs validation
+		if (!username || !password) {
+			return res.status(400).json({ message: "Please fill all the fields" });
+		}
 
-    // try {
-    // 	// * checking for email existence
-    // 	const existingUser = await Moderator.findOne({
-    // 		username: username,
-    // 		type: userRole,
-    // 	});
+		try {
+			// * checking for email existence
+			const existingUser = await Moderator.findOne({
+				username: username,
+				type: userRole,
+			});
 
-    // 	if (!existingUser) {
-    // 		return res.status(401).json({
-    // 			message: "Wrong username or password",
-    // 		});
-    // 	}
+			if (!existingUser) {
+				return res.status(401).json({
+					message: "Wrong username or password",
+				});
+			}
 
-    // 	// * checking for password existence
-    // 	const isPasswordCorrect = await bcrypt.compare(
-    // 		password,
-    // 		existingUser.password
-    // 	);
+			// * checking for password existence
+			const isPasswordCorrect = await bcrypt.compare(
+				password,
+				existingUser.password
+			);
 
-    // 	if (!isPasswordCorrect) {
-    // 		return res.status(401).json({
-    // 			message: "Wrong username or password",
-    // 		});
-    // 	}
+			if (!isPasswordCorrect) {
+				return res.status(401).json({
+					message: "Wrong username or password",
+				});
+			}
 
-    // 	// * logging the user
-    // 	const token = jwt.sign(
-    // 		{ user: existingUser._id, type: userRole },
-    // 		process.env.JWT_SECRET
-    // 	);
+			// * logging the user
+			const token = jwt.sign(
+				{ user: existingUser._id, type: userRole },
+				process.env.JWT_SECRET
+			);
 
-    // 	//* sending token as a cookie
-    // 	return res
-    // 		.cookie("token", token, { httpOnly: true })
-    // 		.send({ type: userRole });
-    // } catch (err) {
-    // 	console.error(err.message);
-    // 	return res.status(500).send();
-    // }
+			//* sending token as a cookie
+			return res
+				.cookie("token", token, { httpOnly: true })
+				.send({ type: userRole });
+		} catch (err) {
+			console.error(err.message);
+			return res.status(500).send();
+		}
+	}
 
-    Moderator.findOne({ username: username })
-      .then((mod) => {
-        // console.log(mod);
-		console.log("found admin")
-		const token = jwt.sign(
-					{ user: mod._id},
-					process.env.JWT_SECRET
-				);
-			
-			res.json({message:"Admin logged in successfully", admin: mod, token: token})
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }
-
-  return res.status(406).send();
+	return res.status(406).send();
 };
 
 module.exports = { loginModerator };
