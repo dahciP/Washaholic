@@ -5,7 +5,7 @@ import Work from "../components/home/Work";
 import Reasons from "../components/home/Reasons";
 import Feedback from "../components/home/Feedback";
 import Footer from "../components/footer/Footer";
-import Map from "../components/map/FindingStore";
+
 
 const Home = () => {
 	document.title = "WASHAHOLIC";
@@ -17,7 +17,7 @@ const Home = () => {
 			<Work />
 			<Reasons />
 			<Feedback />
-			<Map />
+			
 			<Footer />
 		</div>
 	);
