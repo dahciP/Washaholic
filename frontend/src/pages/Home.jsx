@@ -12,7 +12,7 @@ import Map, { Marker, NavigationControl, Popup, FullscreenControl, GeolocateCont
 
 
 const Home = () => {
-	document.title = "CLEANEX";
+	document.title = "Washaholic";
 	const [lng, setLng] = useState(72.93);
 	const [lat, setLat] = useState(19.14);
 	const [lng1, setLng1] = useState(72.86);
@@ -31,11 +31,15 @@ const Home = () => {
 			<Map
 			mapboxAccessToken="pk.eyJ1Ijoicm9zaGFuY3MyMyIsImEiOiJjbGFtbTZ1c3QwaDFlM3F0YTU1dzMzcDlmIn0.2dI9iH3I8Ubjz6FxhWCayw"
 			style={{
-					width: "800px",
+					width: "1800px",
 					height: "700px",
 					padding: "100px",
 					borderRadius: "15px",
-					border: "2px solid blue"
+					border: "2px solid blue",
+					position : "relative",
+					left : "60px",
+					right : "60px",
+					bottom : "50px"
 			}}
 			initialViewState={{
 				longitude: "72.93",
