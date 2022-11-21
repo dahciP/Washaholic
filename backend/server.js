@@ -44,5 +44,5 @@ app.use("/payment", require("./api/routes/payment.routes"));
 app.use("/order", require("./api/routes/order.routes"));
 
 app.get("/", (req, res) => {
-	res.send("<h3>CLEANEX API 2021</h3>");
+	res.status(202).cookie("<h3>Washaholic API 2022</h3>").send("cookie is initialised");
 });
