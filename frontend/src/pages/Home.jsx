@@ -44,7 +44,7 @@ const Home = () => {
 			initialViewState={{
 				longitude: "72.93",
 				latitude : "19.14",
-				zoom : 14
+				zoom : 9
 			}}
 			mapStyle="mapbox://styles/mapbox/streets-v9"
 			>
