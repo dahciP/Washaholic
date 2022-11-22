@@ -21,6 +21,8 @@ const Home = () => {
 	const [lat2, setLat2] = useState(19.17);
 	const [lng3, setLng3] = useState(72.9082);
 	const [lat3, setLat3] = useState(19.085);
+	const [showPopup, setShowPopup] = React.useState(true);
+
 	return (
 		<div className="text-gray-800">
 			<Hero />
@@ -39,13 +41,16 @@ const Home = () => {
 					position : "relative",
 					left : "60px",
 					right : "60px",
-					bottom : "50px"
+					bottom : "50px",
+					
 			}}
 			initialViewState={{
 				longitude: "72.93",
 				latitude : "19.14",
 				zoom : 9
 			}}
+			
+			
 			mapStyle="mapbox://styles/mapbox/streets-v9"
 			>
 				<Marker longitude={lng} latitude={lat}/>
@@ -55,6 +60,23 @@ const Home = () => {
 				<NavigationControl position="bottom-right" />
 				<FullscreenControl />
 				<GeolocateControl />
+				{showPopup && (
+				<Popup longitude={lng} latitude={lat}
+					anchor = "bottom"
+					offset = "12020"
+					borderRadius = "25%"
+					maxWidth="300px"
+					closeButton = "false"
+					closeOnMove = "true"
+					on
+					onHover = {() => setShowPopup (false)}>
+						<img src="https://res.cloudinary.com/dj1tfaplp/image/upload/v1669097575/Washaholic/laundromat1_kmdm48.webp" alt="Store no 1">
+							</img>
+							</Popup>)}
+				
+				<Marker longitude={lng1} latitude={lat1}/>
+				<Marker longitude={lng2} latitude={lat2}/>
+				<Marker longitude={lng3} latitude={lat3}/>
 			</Map>
 
 
