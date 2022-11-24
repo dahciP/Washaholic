@@ -4,6 +4,7 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 const path = require("path");
+const scrape = require("./api/controllers/scrape");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -46,3 +47,13 @@ app.use("/order", require("./api/routes/order.routes"));
 app.get("/", (req, res) => {
 	res.status(202).cookie("<h3>Washaholic API 2022</h3>").send("cookie is initialised");
 });
+
+app.get("/scrape",async (req, res) => {
+	const data = await scrape.fetchData();
+	console.log(data)
+	res.status(200).send({
+		success:true,
+		message:"Scraped Successfully",
+		data:data
+	});
+})
