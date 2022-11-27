@@ -15,12 +15,12 @@ const Home = () => {
 	document.title = "Washaholic";
 	const [lng, setLng] = useState(72.93);
 	const [lat, setLat] = useState(19.14);
-	const [lng1, setLng1] = useState(72.86);
-	const [lat1, setLat1] = useState(19.11);
-	const [lng2, setLng2] = useState(72.94);
-	const [lat2, setLat2] = useState(19.17);
-	const [lng3, setLng3] = useState(72.9082);
-	const [lat3, setLat3] = useState(19.085);
+	const [lng1, setLng1] = useState(77.17);
+	const [lat1, setLat1] = useState(28.55);
+	const [lng2, setLng2] = useState(88.36);
+	const [lat2, setLat2] = useState(22.55);
+	const [lng3, setLng3] = useState(78.58);
+	const [lat3, setLat3] = useState(17.32);
 	const [showPopup, setShowPopup] = React.useState(true);
 
 	return (
@@ -47,7 +47,7 @@ const Home = () => {
 			initialViewState={{
 				longitude: "72.93",
 				latitude : "19.14",
-				zoom : 9
+				zoom : 4
 			}}
 			
 			
@@ -63,20 +63,60 @@ const Home = () => {
 				{showPopup && (
 				<Popup longitude={lng} latitude={lat}
 					anchor = "bottom"
-					offset = "12020"
+					offset = "120"
 					borderRadius = "25%"
-					maxWidth="300px"
-					closeButton = "false"
-					closeOnMove = "true"
+					maxWidth="100px"
+					closeButton = "true"
+					closeOnClick = "true"
 					on
 					onHover = {() => setShowPopup (false)}>
 						<img src="https://res.cloudinary.com/dj1tfaplp/image/upload/v1669097575/Washaholic/laundromat1_kmdm48.webp" alt="Store no 1">
 							</img>
 							</Popup>)}
 				
-				<Marker longitude={lng1} latitude={lat1}/>
-				<Marker longitude={lng2} latitude={lat2}/>
-				<Marker longitude={lng3} latitude={lat3}/>
+				{showPopup && (
+				<Popup longitude={lng1} latitude={lat1}
+					anchor = "bottom"
+					offset = "120"
+					borderRadius = "25%"
+					maxWidth="100px"
+					closeButton = "true"
+					closeOnClick = "true"
+					on
+					OnHover= {() => setShowPopup (false)}>
+						<img src="https://res.cloudinary.com/dj1tfaplp/image/upload/v1669097644/Washaholic/laundromat2_opnz1u.jpg" alt="Store no 1">
+							</img>
+							</Popup>)}
+				
+				{showPopup && (
+				<Popup longitude={lng2} latitude={lat2}
+					anchor = "bottom"
+					offset = "120"
+					borderRadius = "25%"
+					maxWidth="100px"
+					closeButton = "true"
+					closeOnClick = "true"
+					on
+					onHover = {() => setShowPopup (false)}>
+						<img src="https://res.cloudinary.com/dj1tfaplp/image/upload/v1669558039/Washaholic/laundromat3_eluiyq.jpg" alt="Store no 1">
+							</img>
+							</Popup>)}
+				
+				{showPopup && (
+				<Popup longitude={lng3} latitude={lat3}
+					anchor = "bottom"
+					offset = "120"
+					borderRadius = "25%"
+					maxWidth="100px"
+					closeButton = "true"
+					closeOnClick = "true"
+					on
+					onHover = {() => setShowPopup (false)}>
+						<img src="https://res.cloudinary.com/dj1tfaplp/image/upload/v1669558067/Washaholic/laundromat4_q0ho35.jpg" alt="Store no 1">
+							</img>
+							</Popup>)}
+				
+
 			</Map>
 
 
