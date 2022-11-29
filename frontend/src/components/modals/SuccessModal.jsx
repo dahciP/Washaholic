@@ -43,7 +43,7 @@ const SuceessModal = ({ setview, message }) => {
 									className="text-xl leading-6 font-bold text-gray-800"
 									id="modal-title"
 								>
-									{message}
+									Thank you for placing order!!
 								</h3>
 							</div>
 						</div>

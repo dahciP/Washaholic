@@ -1,3 +1,4 @@
+const blog = require("../models/blog.model.js")
 //scrape data from site using axios and jsdom
 const axios = require('axios');
 
@@ -20,6 +21,7 @@ async function fetchData() {
             const title = d.querySelector("h6").textContent;
             const text = d.querySelector("p").textContent;
             rawdata.push({title,text});
+            
         }
         for(let i=1;i<=3;i++){
 
@@ -28,6 +30,13 @@ async function fetchData() {
             const text = d.querySelector("p").textContent;
             rawdata.push({title,text});
         }
+        // res.json(rawdata)
+        for(let i=0;i<=5;i++){
+
+          let CityGuide = new blog({title: rawdata[i].title, text: rawdata[i].text})
+          CityGuide.save();
+        }
+          
         return rawdata;
 
       }).catch(error => {

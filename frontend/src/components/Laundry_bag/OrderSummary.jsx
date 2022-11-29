@@ -154,7 +154,7 @@ const OrderSummary = () => {
 													type="submit"
 												>
 													Confirm
-												</button>
+												</button >
 											</div>
 										</form>
 									</div>
