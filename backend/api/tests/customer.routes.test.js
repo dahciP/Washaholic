@@ -4,10 +4,10 @@ describe("POST @ /customer endpoint", () => {
 	it("should register a customer and and return type", async () => {
 		try {
 			const res = axios.post("http://localhost:5000/customers/register", {
-				name: "Thushara Thiwanka",
-				email: "thiwanka@gmail.com",
-				password: "thiwanka123",
-				mobile: "0764343434",
+				name: "Nikhil Milkhe",
+				email: "nikhilmilkhe@gmail.com",
+				password: "nikhil123",
+				mobile: "0764343435",
 				createdAt: new Date(),
 				updatedAt: new Date(),
 			});
